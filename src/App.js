@@ -81,7 +81,7 @@ export default class App extends Component {
       ...elementsAdjacency.vertical,
       ...elementsAdjacency.horizontal,
     ];
-    console.log(elementsAdjacency);
+
     const checkedBoard = board;
     for (let i = 0; i < height; i++) {
       for (let j = 0; j < width; j++) {
@@ -106,6 +106,8 @@ export default class App extends Component {
           <input
             type='number'
             name='width'
+            min={5}
+            max={20}
             value={width}
             onChange={this.handleChange}
           />
@@ -113,6 +115,8 @@ export default class App extends Component {
           <input
             type='number'
             name='height'
+            min={5}
+            max={20}
             value={height}
             onChange={this.handleChange}
           />
