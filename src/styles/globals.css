@@ -1,0 +1,54 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.title-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.title-container > * {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.title-container input {
+  width: 50px;
+}
+.board {
+  margin: auto;
+  padding: 10px;
+}
+.board-row {
+  display: flex;
+  justify-content: center;
+}
+.board-col {
+  width: 70px;
+  height: 70px;
+  margin: 10px;
+  color: transparent;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.board-col:hover {
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+.board-col.checked {
+  border: 1px solid rgba(244, 67, 54);
+  box-shadow: rgba(244, 67, 54, 0.79) 0px 0px 20px,
+    rgba(159, 81, 76, 0.83) 0px 0px 6px;
+}
