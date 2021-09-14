@@ -94,7 +94,9 @@ export default class App extends Component {
 
   handleChange = (event) => {
     const { name, value } = event.target;
-    this.setState({ [name]: value });
+    this.setState({ [name]: value }, () => {
+      this.createBoardColor();
+    });
   };
 
   render() {
@@ -120,7 +122,7 @@ export default class App extends Component {
             value={height}
             onChange={this.handleChange}
           />
-          <button onClick={this.createBoardColor}>Apply</button>
+          <button onClick={this.createBoardColor}>Reload</button>
         </div>
         <div className='board'>
           {board.map((row, rowIndex) => (
